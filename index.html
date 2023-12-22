@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myself as an Altschool Student</title>
+</head>
+<body>
+
+<p id="username"></p>
+<p id="age"></p>
+
+    <script>
+        // Accept details using prompts
+        const username = prompt("Enter username");
+        const age = prompt("Enter Age");
+        const password = prompt("Enter password");
+        const confirmPassword = prompt("Confirm Password");
+
+        // Use an object to store user details
+        const user ={
+            name: username,
+            age,
+            password,
+        }
+        // Validate user details
+
+
+        // Username must be less than ten
+        if (username.length > 9){
+            alert("Username must be less than ten")
+        }
+        // Password must be greater than six
+        if(password.length < 7){
+            alert("Password must be greater than six")
+        }
+
+        // User must confirms password
+        if(password !== confirmPassword){
+            alert("Password does not match")
+        }
+        // If username and password do not match, alert the user
+
+
+        // Display user details
+        document.querySelector("#username").innerHTML =user.name
+        document.querySelector("#age").innerHTML =user.age
+        console.log(user)
+    </script>
+</body>
+</html>
